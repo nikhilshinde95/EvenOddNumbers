@@ -1,0 +1,20 @@
+import java.util.Arrays;
+
+public class EvenOddNumbers {
+    public static void main(String[] args) {
+
+        int arr[] = {20, 12, 23, 17, 7, 8, 10, 2, 1, 0};
+
+        int evenIndex = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                int temp = arr[evenIndex];
+                arr[evenIndex] = arr[i];
+                arr[i] = temp;
+                evenIndex++;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
